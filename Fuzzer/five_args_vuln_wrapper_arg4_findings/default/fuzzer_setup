@@ -1,0 +1,7 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=/home/student/project/fuzzing/five_args_vuln_wrapper_arg4
+AFL_CUSTOM_INFO_PROGRAM_ARGV=@@
+AFL_CUSTOM_INFO_OUT=/home/student/project/fuzzing/five_args_vuln_wrapper_arg4_findings/default
+AFL_SKIP_BIN_CHECK=1
+# command line:
+'/usr/local/bin/afl-fuzz' '-Q' '-i' '/home/student/project/fuzzing/seeds' '-o' '/home/student/project/fuzzing/five_args_vuln_wrapper_arg4_findings' '--' '/home/student/project/fuzzing/five_args_vuln_wrapper_arg4' '@@'

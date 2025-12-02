@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "binary": "/home/student/project/fuzzing/five_args_vuln_wrapper_arg4",
+    "actual_binary": null,
+    "input_dir": "/home/student/project/fuzzing/seeds",
+    "output_dir": "/home/student/project/fuzzing/five_args_vuln_wrapper_arg4_findings",
+    "mode": "qemu",
+    "timeout": 60,
+    "timestamp": "2025-12-02T22:05:21.730112",
+    "total_crashes": 1
+  },
+  "crashes": [
+    {
+      "filename": "id:000000,sig:11,src:000000,time:61,execs:45,op:havoc,rep:1",
+      "filepath": "/home/student/project/fuzzing/five_args_vuln_wrapper_arg4_findings/default/crashes/id:000000,sig:11,src:000000,time:61,execs:45,op:havoc,rep:1",
+      "timestamp": "2025-12-02T22:05:21.729717",
+      "input": {
+        "size": 25,
+        "md5": "288453a0414324d104ae959d4bd1563a",
+        "sha256": "3d0ab8400a7f89cfcc3f3a33bfa28bba92780bcbab1d4de1da5dd60662c468c9",
+        "hex": "4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4b0a",
+        "printable": "OOOOOOOOOOOOOOOOOOOOOOOK.",
+        "raw_bytes": [
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          75,
+          10
+        ]
+      },
+      "gdb_analysis": {
+        "gdb_output": "\n",
+        "direct_test": {
+          "returncode": -11,
+          "stdout": "",
+          "stderr": "",
+          "crashed": true,
+          "exit_signal": 11
+        },
+        "signal": null,
+        "signal_code": null,
+        "fault_address": null,
+        "backtrace": [],
+        "backtrace_full": "",
+        "registers": {},
+        "instruction_pointer": null,
+        "crashing_instruction": null,
+        "stack_dump": [],
+        "crash_reason": [
+          "Unknown crash reason"
+        ],
+        "exploitability": {
+          "level": "UNKNOWN",
+          "score": 0,
+          "indicators": [
+            "Insufficient data"
+          ]
+        }
+      },
+      "dynamorio_analysis": {
+        "error": "drrun not found"
+      },
+      "input_dependency": {
+        "is_input_dependent": true,
+        "confidence_score": 3,
+        "max_score": 20,
+        "confidence_percent": 15,
+        "reasons": [
+          "Program crashes when run with this input (exit signal: 11)",
+          "Large input size: 25 bytes"
+        ]
+      }
+    }
+  ]
+}
