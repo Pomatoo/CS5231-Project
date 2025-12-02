@@ -1,0 +1,40 @@
+
+======================================================================
+ARGV → BUFFER OVERFLOW VULNERABILITY REPORT
+======================================================================
+Binary: ../vuln_bins/five_args_vuln
+
+
+STRCPY Buffer Overflows (10 paths):
+----------------------------------------
+
+  From argv[2]:
+    [1] Path to strcpy:
+        main → process_vuln → strcpy
+        Length: 3 functions
+        Risk: HIGH - No size validation (second argument)
+    [2] Path to strcpy:
+        main → process_vuln → strcpy
+        Length: 3 functions
+        Risk: HIGH - No size validation (second argument)
+    [3] Path to strcpy:
+        main → process_vuln → strcpy → strcpy
+        Length: 4 functions
+        Risk: HIGH - No size validation (second argument)
+
+  From argv[4]:
+    [1] Path to strcpy:
+        main → process_vuln → strcpy
+        Length: 3 functions
+        Risk: HIGH - No size validation
+    [2] Path to strcpy:
+        main → process_vuln → strcpy
+        Length: 3 functions
+        Risk: HIGH - No size validation
+    [3] Path to strcpy:
+        main → process_vuln → strcpy → strcpy
+        Length: 4 functions
+        Risk: HIGH - No size validation
+
+======================================================================
+Total vulnerabilities: 10
